@@ -23,7 +23,7 @@ class EquipmentController extends Controller
             $query->where('status', $request->status);
         }
 
-        $equipments = $query->latest()->get();
+        $equipments = $query->latest()->paginate(5);
 
         return view('equipments.index', compact('equipments'));
     }

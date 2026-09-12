@@ -94,6 +94,9 @@
                 @endforelse
             </tbody>
         </table>
+        <div class="mt-4">
+            {{ $equipments->appends(request()->query())->links() }}
+        </div>
     </div>
 
 @endsection
