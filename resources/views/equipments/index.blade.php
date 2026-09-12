@@ -22,7 +22,11 @@
             <tbody class="divide-y divide-gray-100">
                 @forelse($equipments as $equipment)
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-medium text-gray-800">{{ $equipment->name }}</td>
+                        <td class="px-6 py-4 font-medium text-gray-800">
+                            <a href="{{ route('equipments.show', $equipment) }}" class="text-blue-600 hover:underline">
+                                {{ $equipment->name }}
+                            </a>
+                        </td>
                         <td class="px-6 py-4 text-gray-600">{{ $equipment->category }}</td>
                         <td class="px-6 py-4 text-gray-500 text-sm">{{ $equipment->serial_number }}</td>
                         <td class="px-6 py-4 text-gray-600">{{ $equipment->location }}</td>
