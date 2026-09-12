@@ -70,4 +70,10 @@ class EquipmentController extends Controller
         return redirect()->route('equipments.index')
                          ->with('success', 'Équipement supprimé.');
     }
+
+    // Affiche de la page détail d'un équipement
+    public function show(Equipment $equipment)
+    {
+        return view('equipments.show', compact('equipment'));
+    }
 }
