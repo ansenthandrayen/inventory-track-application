@@ -8,9 +8,23 @@ use Illuminate\Http\Request;
 class EquipmentController extends Controller
 {
     // Liste tous les équipements
-    public function index()
+    public function index(Request $request)
     {
-        $equipments = Equipment::latest()->get();
+        $query = Equipment::query();
+
+        // Recherche par nom ou catégorie
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('category', 'like', '%' . $request->search . '%');
+        }
+
+        // Filtre par statut
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        $equipments = $query->latest()->get();
+
         return view('equipments.index', compact('equipments'));
     }
 
