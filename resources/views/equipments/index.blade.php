@@ -2,6 +2,31 @@
 
 @section('content')
 
+    <form method="GET" action="{{ route('equipments.index') }}" class="flex gap-3 mb-6">
+        <input
+            type="text"
+            name="search"
+            value="{{ request('search') }}"
+            placeholder="Rechercher par nom ou catégorie..."
+            class="flex-1 border rounded px-3 py-2 text-sm"
+        >
+        <select name="status" class="border rounded px-3 py-2 text-sm">
+            <option value="">Tous les statuts</option>
+            <option value="disponible"     {{ request('status') == 'disponible'     ? 'selected' : '' }}>Disponible</option>
+            <option value="en_utilisation" {{ request('status') == 'en_utilisation' ? 'selected' : '' }}>En utilisation</option>
+            <option value="en_maintenance" {{ request('status') == 'en_maintenance' ? 'selected' : '' }}>En maintenance</option>
+            <option value="hors_service"   {{ request('status') == 'hors_service'   ? 'selected' : '' }}>Hors service</option>
+        </select>
+        <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded text-sm hover:bg-blue-800">
+            Rechercher
+        </button>
+        @if(request('search') || request('status'))
+            <a href="{{ route('equipments.index') }}" class="border px-4 py-2 rounded text-sm text-gray-600 hover:bg-gray-50">
+                Réinitialiser
+            </a>
+        @endif
+    </form>    
+
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold text-gray-800">Liste des équipements</h1>
         <span class="text-gray-500">{{ $equipments->count() }} équipement(s)</span>
