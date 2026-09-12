@@ -1,0 +1,48 @@
+# InventoryTrack — Roadmap
+
+Application d'inventaire d'équipements construite avec Laravel 12.
+Projet réalisé dans le cadre d'une montée en compétences Laravel.
+
+---
+
+## ✅ Fait
+
+- [x] Installation Laravel 12 + PHP 8.3
+- [x] Migration et modèle `Equipment`
+- [x] CRUD complet (Controller + Routes + Views)
+- [x] Validation des formulaires
+- [x] Messages flash (succès/erreur)
+- [x] Statuts colorés (disponible, en utilisation, en maintenance, hors service)
+- [x] Seeders avec données réalistes
+
+---
+
+## 🚧 En cours
+
+- [ ] Page détail équipement (`show`) avec notes complètes
+
+---
+
+## 📋 À faire
+
+### Features
+
+- [ ] Recherche par nom / catégorie / localisation
+- [ ] Pagination de la liste
+- [ ] API REST JSON `/api/equipments` (simulation app mobile)
+- [ ] Filtres par statut
+
+### Technique
+
+- [ ] Migration vers MySQL
+- [ ] FormRequest pour la validation
+- [ ] Tests unitaires et fonctionnels
+
+---
+
+## 🛠️ Stack technique
+
+- **Backend** : PHP 8.3, Laravel 12
+- **Base de données** : SQLite (dev) → MySQL (prod)
+- **Frontend** : Blade, Tailwind CSS
+- **Outils** : Composer, Artisan, Git
