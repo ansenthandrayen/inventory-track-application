@@ -14,12 +14,12 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 - [x] Messages flash (succès/erreur)
 - [x] Statuts colorés (disponible, en utilisation, en maintenance, hors service)
 - [x] Seeders avec données réalistes
-
----
-
-## 🚧 En cours
-
-- [ ] Page détail équipement (`show`) avec notes complètes
+- [x] Page détail équipement avec notes
+- [x] Recherche par nom / catégorie
+- [x] Filtre par statut
+- [x] Pagination (5 équipements par page)
+- [x] API REST JSON (`/api/equipments`)
+- [x] Migration vers MySQL
 
 ---
 
@@ -27,14 +27,8 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 
 ### Features
 
-- [ ] Recherche par nom / catégorie / localisation
-- [ ] Pagination de la liste
-- [ ] API REST JSON `/api/equipments` (simulation app mobile)
-- [ ] Filtres par statut
-
-### Technique
-
-- [ ] Migration vers MySQL
+- [ ] Authentification (login/logout)
+- [ ] Protection API avec Laravel Sanctum
 - [ ] FormRequest pour la validation
 - [ ] Tests unitaires et fonctionnels
 
@@ -43,6 +37,7 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 ## 🛠️ Stack technique
 
 - **Backend** : PHP 8.3, Laravel 12
-- **Base de données** : SQLite (dev) → MySQL (prod)
-- **Frontend** : Blade, Tailwind CSS
-- **Outils** : Composer, Artisan, Git
+- **Base de données** : MySQL (XAMPP)
+- **Frontend** : Blade, Tailwind CSS CDN
+- **API** : REST JSON
+- **Outils** : Composer, Artisan, Git, GitHub
