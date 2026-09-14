@@ -20,16 +20,15 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 - [x] Pagination (5 équipements par page)
 - [x] API REST JSON (`/api/equipments`)
 - [x] Migration vers MySQL
+- [x] FormRequest pour la validation (StoreEquipmentRequest + UpdateEquipmentRequest)
+- [x] Messages d'erreur personnalisés en français
 
 ---
 
 ## 📋 À faire
 
-### Features
-
 - [ ] Authentification (login/logout)
 - [ ] Protection API avec Laravel Sanctum
-- [ ] FormRequest pour la validation
 - [ ] Tests unitaires et fonctionnels
 
 ---
