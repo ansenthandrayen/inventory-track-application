@@ -20,16 +20,12 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 - [x] Pagination (5 équipements par page)
 - [x] API REST JSON (`/api/equipments`)
 - [x] Migration vers MySQL
-- [x] FormRequest pour la validation (StoreEquipmentRequest + UpdateEquipmentRequest)
+- [x] FormRequest pour la validation
 - [x] Messages d'erreur personnalisés en français
-- [x] Authentification complète (Login / Register / Logout)
+- [x] Authentification complète (Laravel Breeze)
 - [x] Routes protégées par middleware auth
-
----
-
-## 📋 À faire
-
-- [ ] Tests unitaires et fonctionnels (PHPUnit)
+- [x] Tests fonctionnels (27 tests — 0 échec)
+- [x] Factory pour les données de test
 
 ---
 
@@ -40,4 +36,5 @@ Projet réalisé dans le cadre d'une montée en compétences Laravel.
 - **Frontend** : Blade, Tailwind CSS CDN
 - **Auth** : Laravel Breeze
 - **API** : REST JSON
+- **Tests** : PHPUnit (27 tests)
 - **Outils** : Composer, Artisan, Git, GitHub
